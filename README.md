@@ -32,37 +32,43 @@ Variants Sars-Cov-2 monitored by WHO [World Health Organization](https://www.who
 `/apps/schrodinger/2021.2/run utilities/getpdb PDBcode`
 ### 2. Visualize PDB on maestro interface
 Use tool ‘change atom property’ in order to assign correct chain name at Spike and mAb:
-- **7C01** : 	- chain A Spike-RBD -> chain A
+- **7C01** :
+	 	- chain A Spike-RBD -> chain A
 		
 		- chain H Heavy Fab -> chain B
 
 		- chain L Light Fab -> chain C
 
-- **7KMG** : 	- chain C Spike-RBD -> chain A
+- **7KMG** :
+	 	- chain C Spike-RBD -> chain A
 
 		- chain A Heavy Fab -> chain B
 
 		- chain B Light Fab -> chain C
 
-- **7L7D** : 	- chain E Spike-RBD -> chain A
+- **7L7D** :
+	 	- chain E Spike-RBD -> chain A
 
 		- chain H Heavy Fab -> chain B
 
 		- chain L Light Fab -> chain C
 
-- **7L7E** : 	- chain G Spike-RBD -> chain A
+- **7L7E** :
+	 	- chain G Spike-RBD -> chain A
 
 		- chain E Heavy Fab -> chain B
 
 		- chain F Light Fab -> chain C
 
-- **6ZCZ** : 	- chain E Spike-RBD -> chain A
+- **6ZCZ** :
+	 	- chain E Spike-RBD -> chain A
 
 		- chain H Heavy Fab -> chain B
 
 		- chain L Light Fab -> chain C
 
-- **6XE1** : 	- chain E Spike-RBD -> chain A
+- **6XE1** :
+	 	- chain E Spike-RBD -> chain A
 
 		- chain H Heavy Fab -> chain B
 
