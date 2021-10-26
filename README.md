@@ -11,17 +11,17 @@ PDB code available at [RCSB:PDB](rcsb.org).
 Use *rcsbSEARCH.json* to check realeasing of new PDBs of mAb against SC2 RBD. 
 
 Here, PDBcode selected for validation analysis:
-- **_7C01_** -> **Ly-cov016** (CB6)
+- **_7C01_** -> *Ly-cov016 (CB6)*
 
-- **_7KMG_** -> **Ly-Cov555**
+- **_7KMG_** -> *Ly-Cov555*
 
-- **_7L7D_** -> **AZD8895**
+- **_7L7D_** -> *AZD8895*
 
-- **_7L7E_** -> **AZD1061**
+- **_7L7E_** -> *AZD1061*
 
-- **_6ZCZ_** -> **EY6A**
+- **_6ZCZ_** -> *EY6A*
 
-- **_6XE1_** -> **CV30**
+- **_6XE1_** -> *CV30*
 
 Variants Sars-Cov-2 monitored by WHO [World Health Organization](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/)
 
@@ -33,6 +33,7 @@ Variants Sars-Cov-2 monitored by WHO [World Health Organization](https://www.who
 ### 2. Visualize PDB on maestro interface
 Use tool ‘change atom property’ in order to assign correct chain name at Spike and mAb:
 - **7C01** :
+
 	 	- chain A Spike-RBD -> chain A
 		
 		- chain H Heavy Fab -> chain B
@@ -40,6 +41,7 @@ Use tool ‘change atom property’ in order to assign correct chain name at Spi
 		- chain L Light Fab -> chain C
 
 - **7KMG** :
+
 	 	- chain C Spike-RBD -> chain A
 
 		- chain A Heavy Fab -> chain B
@@ -47,6 +49,7 @@ Use tool ‘change atom property’ in order to assign correct chain name at Spi
 		- chain B Light Fab -> chain C
 
 - **7L7D** :
+
 	 	- chain E Spike-RBD -> chain A
 
 		- chain H Heavy Fab -> chain B
@@ -54,6 +57,7 @@ Use tool ‘change atom property’ in order to assign correct chain name at Spi
 		- chain L Light Fab -> chain C
 
 - **7L7E** :
+
 	 	- chain G Spike-RBD -> chain A
 
 		- chain E Heavy Fab -> chain B
@@ -61,6 +65,7 @@ Use tool ‘change atom property’ in order to assign correct chain name at Spi
 		- chain F Light Fab -> chain C
 
 - **6ZCZ** :
+
 	 	- chain E Spike-RBD -> chain A
 
 		- chain H Heavy Fab -> chain B
@@ -68,6 +73,7 @@ Use tool ‘change atom property’ in order to assign correct chain name at Spi
 		- chain L Light Fab -> chain C
 
 - **6XE1** :
+
 	 	- chain E Spike-RBD -> chain A
 
 		- chain H Heavy Fab -> chain B
