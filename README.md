@@ -107,4 +107,7 @@ For further information `python3 ~/htmd/protein.py -h`
 
 `python3 ~/htmd/native.py -tpr MD.tpr -xtc trj.xtc -method switch_function -sel_A "segid A" -sel_B "segid C"` -> *segid C_with_segid A.pkl*; *contacts_of_segid C_with_segid A.png*
 ### 7. Data Analysis
-`python3 stratibody_sars-cov-2/analysisMD.py segid\ B_with_segid\ A.pkl segid\ C_with_segid\ A.pkl RBDtype mAbname` -> *STRATIBODY.csv*
+`python3 ~/stratibody_sars-cov-2/analysisMD.py segid\ B_with_segid\ A.pkl segid\ C_with_segid\ A.pkl RBDtype mAbname` -> *STRATIBODY.csv*
+
+`python3 ~/stratibody_sars-cov-2/STRATIBODYtot.py directory_exp1/STRATIBODY.csv directory_exp2/STRATIBODY.csv directory_exp3/STRATIBODY.csvRBDtype mAbname` -> *STRATIBODY_RBDtype-mAbname.csv*
+
