@@ -94,11 +94,13 @@ If only chains A,B,C are in PDB file launch:
 
 `git switch bea_working_analysis`
 
-`python3 ~/htmd/protein.py -s ~/path_to/pdbPREP.pdb -nt 16 -ns 100 -ff oplsaa -d 1 -bt dodecahedron -ntmpi -trj`
+If mutation **Docking** or run this before than MDsimulation: [script checking variants in progress ..] 
 
-If mutation **Docking** or: [script checking variants in progress ..] 
+`python3 ~/htmd/mutation.py -i pdbPREP.pdb -r "A-417,A-452,A-478" -a "THR,ARG,LYS" -o fileoutput.pdb`
 
--r; -a : `python3 ~/htmd/protein.py -s ~/pdbPREP.pdb -nt 1 -ns 100 –ff oplsaa -d 1 -bt dodecahedron -r "A-417,A-452,A-478" -a "THR,ARG,LYS" -ntmpi -trj`
+MDsimulation:
+
+`python3 ~/htmd/protein.py -s ~/path_to/pdbPREP.pdb -nt 24 -ns 100 -ff oplsaa -d 1 -bt dodecahedron -ntmpi -trj`
 
 For further information `python3 ~/htmd/protein.py -h`
 
