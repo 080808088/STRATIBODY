@@ -10,6 +10,7 @@ import argparse
 import re
 from os import system, getcwd, listdir, makedirs, rename, chdir
 import giuseppone as g
+import graphic as graph
 
 AB = g.convert(sys.argv[1])
 AC = g.convert(sys.argv[2])
@@ -42,3 +43,5 @@ df = pd.DataFrame(list(zip(colonna_1, colonna_2, colonna_3, colonna_4)), columns
 print(df)
 
 df.to_csv('STRATIBODY.csv', index=False)
+
+graph.make_graphic('STRATIBODY.csv')
