@@ -20,6 +20,7 @@ def make_graphic(f):
 	ax.set_xlabel('ns')  # Add an x-label to the axes.
 	ax.set_ylabel('affinity_score')  # Add a y-label to the axes.
 	ax.set_title("Affinity Plot" + "_" + str(sys.argv[3]) + "-" + str(sys.argv[4]))  # Add a title to the axes.
+        plt.ylim(0,1)   # Normalize value y.
 
 	out = plt.savefig("grafico.png", format = 'png', dpi = 600)
 	out = plt.close()
