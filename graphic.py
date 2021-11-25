@@ -1,4 +1,4 @@
-#! /usr/bin/python
+i#! /usr/bin/python
 # -*- coding: utf-8 -*-
 
 import argparse
@@ -12,8 +12,7 @@ from io import BytesIO
 def make_graphic(f):
 	a = pd.read_csv(f)
 	x = [int(b) for b in list(range(101))]
-        
-	y = a.iloc[:, 2]
+        y = a.iloc[:, 2]
 
 	fig, ax = plt.subplots(1, 1)  # Create a figure and an axes.
 	ax.plot(x, y)  # Plot some data on the axes.
