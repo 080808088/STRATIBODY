@@ -11,21 +11,25 @@ PDB code available at [RCSB:PDB](rcsb.org).
 Use *rcsbSEARCH.json* to check realeasing of new PDBs of mAb against SC2 RBD. 
 
 Here, PDBcode selected for validation analysis:
-- **_7C01_** -> *Ly-cov016 (CB6)*
+- **_7C01_** -> *Ly-cov016 (CB6)* _Etesevimab_
 
-- **_7KMG_** -> *Ly-Cov555*
+- **_7KMG_** -> *Ly-Cov555* _Bamlanivimab_
 
-- **_7L7D_** -> *AZD8895*
+- **_7L7D_** -> *AZD8895* _Tixagevimab_
 
-- **_7L7E_** -> *AZD1061*
+- **_7L7E_** -> *AZD1061* _Cilgavimab_
 
 - **_6ZCZ_** -> *EY6A*
 
-- **_6XE1_** -> *CV30*
+- **_7CM4_** -> *CT-P59* _Regdanvimab_
 
 Variants Sars-Cov-2 monitored by WHO [World Health Organization](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/)
 
-~script in progress~
+LINEAGE | RBD mutation
+_Alpha_ (B.1.1.7): N501Y
+_Beta_ (B.1.351): K417N,E484K,N501Y
+_Delta_ (B.1.617.2): L452R,T478K
+_Omicron_ (B.1.1.529.1): G339D, S371L, S373P, S375F, K417N, N440K, G446S, S477N, T478K, E484A, Q493R, G496S, Q498R, N501Y, Y505H
 
 ## WORKFLOW
 ### 1. PDB download 
@@ -72,9 +76,9 @@ Use tool ‘change atom property’ in order to assign correct chain name at Spi
 
 		- chain L Light Fab -> chain C
 
-- **6XE1** :
+- **7CM4** :
 
-	 	- chain E Spike-RBD -> chain A
+	 	- chain A Spike-RBD -> chain A
 
 		- chain H Heavy Fab -> chain B
 
@@ -113,3 +117,4 @@ For further information `python3 ~/htmd/protein.py -h`
 
 `python3 ~/stratibody_sars-cov-2/STRATIBODYtot.py directory_exp1/STRATIBODY.csv directory_exp2/STRATIBODY.csv directory_exp3/STRATIBODY.csvRBDtype mAbname` -> *STRATIBODY_RBDtype-mAbname.csv*
 
+`python3 ~/stratibody_sars-cov-2/graphic_tot.py STRATIBODY_RBDtype-mAbname.csv RBDtype mAbname` -> grafico media esperimento in triplicato *graficoRBDtypemAb.png*
