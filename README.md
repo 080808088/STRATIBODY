@@ -26,9 +26,13 @@ Here, PDBcode selected for validation analysis:
 Variants Sars-Cov-2 monitored by WHO [World Health Organization](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/)
 
 LINEAGE | RBD mutation
+
 _Alpha_ (B.1.1.7): N501Y
+
 _Beta_ (B.1.351): K417N,E484K,N501Y
+
 _Delta_ (B.1.617.2): L452R,T478K
+
 _Omicron_ (B.1.1.529.1): G339D, S371L, S373P, S375F, K417N, N440K, G446S, S477N, T478K, E484A, Q493R, G496S, Q498R, N501Y, Y505H
 
 ## WORKFLOW
@@ -118,3 +122,11 @@ For further information `python3 ~/htmd/protein.py -h`
 `python3 ~/stratibody_sars-cov-2/STRATIBODYtot.py directory_exp1/STRATIBODY.csv directory_exp2/STRATIBODY.csv directory_exp3/STRATIBODY.csvRBDtype mAbname` -> *STRATIBODY_RBDtype-mAbname.csv*
 
 `python3 ~/stratibody_sars-cov-2/graphic_tot.py STRATIBODY_RBDtype-mAbname.csv RBDtype mAbname` -> grafico media esperimento in triplicato *graficoRBDtypemAb.png*
+
+Per grafico comulativo delle varianti : `python3 ~/stratibody_sars-cov-2/makegraph.py y[n°varianti] nomemAb ~/pathSTRATIBODY_WT-mAb.csv ~/pathSTRATIBODY_BETA-mAb.csv ~/pathSTRATIBODY_OMICRON-mAb.csv ~/pathSTRATIBODY_DELTA-mAb.csv ~/pathSTRATIBODY_ALFA-mAb.csv`
+	
+	es : python3 ~/stratibody_sars-cov-2/makegraph.py y5 Bamlanivimab ~/STRATIBODY_WT-LyCov555.csv ~/STRATIBODY_BETA-LyCov555.csv ~/STRATIBODY_OMICRON-LyCov555.csv ~/STRATIBODY_DELTA-LyCov555.csv ~/ALFA-7kmg/STRATIBODY.csv
+
+	if not ALFA : python3 ~/stratibody_sars-cov2/makegraph.py y4 Bamlanivimab ~/STRATIBODY_WT-LyCov555.csv ~/STRATIBODY_BETA-LyCov555.csv ~/STRATIBODY_OMICRON-LyCov555.csv ~/STRATIBODY_DELTA-LyCov555.csv
+
+	ecc ..
