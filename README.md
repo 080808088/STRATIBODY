@@ -116,9 +116,9 @@ For further information `python3 ~/htmd/protein.py -h`
 `python3 ~/htmd/native.py -tpr MD.tpr -xtc trjadj.xtc -method switch_function -sel_A "segid A" -sel_B "segid B"` -> *segid B_with_segid A.pkl*; *contacts_of_segid B_with_segid A.png*
 
 `python3 ~/htmd/native.py -tpr MD.tpr -xtc trjadj.xtc -method switch_function -sel_A "segid A" -sel_B "segid C"` -> *segid C_with_segid A.pkl*; *contacts_of_segid C_with_segid A.png*
-### 7. Data Analysis
-`python3 ~/stratibody_sars-cov-2/analysisMD.py segid\ B_with_segid\ A.pkl segid\ C_with_segid\ A.pkl RBDtype mAbname` -> *STRATIBODY.csv*; *grafico.png*
 
+`python3 ~/stratibody_sars-cov-2/analysisMD.py segid\ B_with_segid\ A.pkl segid\ C_with_segid\ A.pkl RBDtype mAbname` -> *STRATIBODY.csv*; *grafico.png*
+### 7. Data Analysis
 `python3 ~/stratibody_sars-cov-2/STRATIBODYtot.py directory_exp1/STRATIBODY.csv directory_exp2/STRATIBODY.csv directory_exp3/STRATIBODY.csv RBDtype mAbname` -> *STRATIBODY_RBDtype-mAbname.csv*
 
 `python3 ~/stratibody_sars-cov-2/graphic_tot.py STRATIBODY_RBDtype-mAbname.csv RBDtype mAbname` -> grafico media esperimento in triplicato *graficoRBDtypemAb.png*
