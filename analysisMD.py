@@ -29,18 +29,19 @@ g = affinity_score[0:102]
 affinity = pd.DataFrame(g)
 file_csv = affinity
 colonna_3 = file_csv.iloc[:, 0]
-print(colonna_3.mean(0))
+media = colonna_3.mean(0)
+testo = open("mediaAS.txt", "a")
+testo.write(media)
+testo.close()
 
 exp_cond = (f'{sys.argv[3]}-{sys.argv[4]}')
 c = [str(exp_cond)]
 for z in c:
     z = z.strip()
     colonna_4 = pd.Series(z, index=range(101))
-    print(colonna_4)
 # #experimental_conditions
 
 df = pd.DataFrame(list(zip(colonna_1, colonna_2, colonna_3, colonna_4)), columns=['ID', 'ns', 'score', 'E.C.'])
-print(df)
 
 df.to_csv('STRATIBODY.csv', index=False)
 
