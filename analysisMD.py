@@ -31,7 +31,7 @@ file_csv = affinity
 colonna_3 = file_csv.iloc[:, 0]
 media = colonna_3.mean(0)
 testo = open("mediaAS.txt", "a")
-testo.write(media)
+testo.write(str(media))
 testo.close()
 
 exp_cond = (f'{sys.argv[3]}-{sys.argv[4]}')
