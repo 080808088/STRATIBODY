@@ -119,9 +119,7 @@ For further information `python3 ~/htmd/protein.py -h`
 
 `python3 ~/stratibody_sars-cov-2/analysisMD.py segid\ B_with_segid\ A.pkl segid\ C_with_segid\ A.pkl RBDtype mAbname` -> *STRATIBODY.csv*; *grafico.png*
 ### 7. Data Analysis
-`python3 ~/stratibody_sars-cov-2/STRATIBODYtot.py directory_exp1/STRATIBODY.csv directory_exp2/STRATIBODY.csv directory_exp3/STRATIBODY.csv RBDtype mAbname` -> *STRATIBODY_RBDtype-mAbname.csv*
-
-`python3 ~/stratibody_sars-cov-2/graphic_tot.py STRATIBODY_RBDtype-mAbname.csv RBDtype mAbname` -> grafico media esperimento in triplicato *graficoRBDtypemAb.png*
+`python3 ~/stratibody_sars-cov-2/STRATIBODYtot.py directory_exp1/STRATIBODY.csv directory_exp2/STRATIBODY.csv directory_exp3/STRATIBODY.csv RBDtype mAbname` -> *STRATIBODY_RBDtype-mAbname.csv* ; *graficoRBDtypemAb.png*
 
 Per grafico comulativo delle varianti : `python3 ~/stratibody_sars-cov-2/makegraph.py y[n°varianti] nomemAb ~/pathSTRATIBODY_WT-mAb.csv ~/pathSTRATIBODY_BETA-mAb.csv ~/pathSTRATIBODY_OMICRON-mAb.csv ~/pathSTRATIBODY_DELTA-mAb.csv ~/pathSTRATIBODY_ALFA-mAb.csv`
 	
