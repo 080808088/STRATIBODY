@@ -23,6 +23,7 @@ Here, PDBcode selected for validation analysis:
 
 - **_7CM4_** -> *CT-P59* _Regdanvimab_
 
+- **_7R6W_** -> *S309* _Sotrovimab_
 Variants Sars-Cov-2 monitored by WHO [World Health Organization](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/)
 
 LINEAGE | RBD mutation
@@ -87,6 +88,14 @@ Use tool ‘change atom property’ in order to assign correct chain name at Spi
 		- chain H Heavy Fab -> chain B
 
 		- chain L Light Fab -> chain C
+
+- **7R6W** :
+
+		- chain R Spike-RBD -> chain A
+
+		- chain A Heavy Fab -> chain B
+		
+		- chain B Light Fab -> chain C
 ### 3. Clean PDB from HETATM
 If it is necessary delete others chains than A,B,C with:
 
@@ -102,7 +111,7 @@ If only chains A,B,C are in PDB file launch:
 
 `git switch bea_working_analysis`
 
-If mutation **Docking** or run this before than MDsimulation: [script checking variants in progress ..] 
+If simulation is performed with a mutated RBD, run the following command before MDsimulation: 
 
 `python3 ~/htmd/mutation.py -i pdbPREP.pdb -r "A-417,A-452,A-478" -a "THR,ARG,LYS" -o fileoutput.pdb`
 
@@ -119,12 +128,27 @@ For further information `python3 ~/htmd/protein.py -h`
 
 `python3 ~/stratibody_sars-cov-2/analysisMD.py segid\ B_with_segid\ A.pkl segid\ C_with_segid\ A.pkl RBDtype mAbname` -> *STRATIBODY.csv*; *grafico.png*
 ### 7. Data Analysis
+Avarage of the experiments in triplicate: 
+
 `python3 ~/stratibody_sars-cov-2/STRATIBODYtot.py directory_exp1/STRATIBODY.csv directory_exp2/STRATIBODY.csv directory_exp3/STRATIBODY.csv RBDtype mAbname` -> *STRATIBODY_RBDtype-mAbname.csv* ; *graficoRBDtypemAb.png*
 
-Per grafico comulativo delle varianti : `python3 ~/stratibody_sars-cov-2/makegraph.py y[n°varianti] nomemAb ~/pathSTRATIBODY_WT-mAb.csv ~/pathSTRATIBODY_BETA-mAb.csv ~/pathSTRATIBODY_OMICRON-mAb.csv ~/pathSTRATIBODY_DELTA-mAb.csv ~/pathSTRATIBODY_ALFA-mAb.csv`
+Cumulative graph of the antibody effectiveness against RBD variants:
+
+`python3 ~/stratibody_sars-cov-2/makegraph.py y[n°varianti] nomemAb ~/pathSTRATIBODY_WT-mAb.csv ~/pathSTRATIBODY_BETA-mAb.csv ~/pathSTRATIBODY_OMICRON-mAb.csv ~/pathSTRATIBODY_DELTA-mAb.csv ~/pathSTRATIBODY_ALFA-mAb.csv` -> *grafico_RBDvariantsnomemAb*
 	
 	es : python3 ~/stratibody_sars-cov-2/makegraph.py y5 Bamlanivimab ~/STRATIBODY_WT-LyCov555.csv ~/STRATIBODY_BETA-LyCov555.csv ~/STRATIBODY_OMICRON-LyCov555.csv ~/STRATIBODY_DELTA-LyCov555.csv ~/ALFA-7kmg/STRATIBODY.csv
 
 	if not ALFA : python3 ~/stratibody_sars-cov2/makegraph.py y4 Bamlanivimab ~/STRATIBODY_WT-LyCov555.csv ~/STRATIBODY_BETA-LyCov555.csv ~/STRATIBODY_OMICRON-LyCov555.csv ~/STRATIBODY_DELTA-LyCov555.csv
 
 	ecc ..
+
+Cumulative file 'csv' of the antibody effectiveness against RBD variants:
+
+`python3 ~/stratibody_sars-cov-2/makefile.py nomemAb ~/pathSTRATIBODY_WT-mAb.csv ~/pathSTRATIBODY_ALFA-mAb.csv ~/pathSTRATIBODY_BETA-mAb.csv ~/pathSTRATIBODY_DELTA-mAb.csv ~/pathSTRATIBODY_OMICRON-mAb.csv` -> *STRATIBODY_nomemAB.csv*
+
+To merge all the results:
+
+- find the results in /finalSTRATIBODY/
+
+`python3 ~/stratibody_sars-cov-2/finalSTRATIBODY/finalSTRATIBODY.py STRATIBODY_Bamlanivimab.csv STRATIBODY_Etesevimab.csv STRATIBODY_Regdanvimab.csv STRATIBODY_Cilgavimab.csv STRATIBODY_Tixagevimab.csv STRATIBODY_Sotrovimab.csv STRATIBODY_EY6A.csv`
+
