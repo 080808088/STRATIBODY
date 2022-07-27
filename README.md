@@ -24,6 +24,7 @@ Here, PDBcode selected for validation analysis:
 - **_7CM4_** -> *CT-P59* _Regdanvimab_
 
 - **_7R6W_** -> *S309* _Sotrovimab_
+
 Variants Sars-Cov-2 monitored by WHO [World Health Organization](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/)
 
 LINEAGE | RBD mutation
